@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Picker</title>
+</head>
+
+<body>
+    <select name="pilih_hewan" id="pilih" onchange="ubah()">
+      <option disabled selected>Pilih</option>
+      <option value="singa">Singa</option>
+      <option value="gajah">Gajah</option>
+      <option value="jerapah">Jerapah</option>
+      <option value="kucing">Kucing</option>
+      <option value="macan">Macan</option>
+    </select>
+    <br />
+    <img src="" alt="" id="tampil" />
+    <script>
+        function ubah() {
+            let image = document.getElementById("pilih").value;
+            let view = document.getElementById("tampil");
+            if (image == "singa") {
+                view.src = "singa.jpeg";
+                alert("ini gambar singa");
+            } else if (image == "gajah") {
+                view.src = "gajah.jpg";
+                alert("ini gambar gajah");
+            } else if (image == "jerapah") {
+                view.src = "jerapah.jpg";
+                alert("ini gambar jerapah");
+            } else if (image == "kucing") {
+                view.src = "kucing.png";
+                alert("ini gambar kucing");
+            } else if (image == "macan") {
+                view.src = "macan.png";
+                alert("ini gambar macan");
+            }
+        }
+    </script>
+</body>
+
+</html>
